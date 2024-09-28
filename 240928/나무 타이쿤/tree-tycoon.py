@@ -28,11 +28,12 @@ cross_dir = [
 ]
 
 for i in range(n):
-    tree_height = list(map(int, input().split(" ")))
+    tree_height = list(map(int, input().split(' ')))
+    print(tree_height)
     forest.append(tree_height)
 
 for i in range(m):
-    rule_tmp = list(map(int, input().split(" ")))
+    rule_tmp = list(map(int, input().split(' ')))
     rule.append(rule_tmp)
     
 
