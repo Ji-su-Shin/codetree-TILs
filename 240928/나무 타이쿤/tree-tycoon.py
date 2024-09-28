@@ -1,7 +1,7 @@
 import copy
 
 # 변수 선언, 할당
-n, m = map(int, input().split(" ")) # 칸 수, 년도
+n, m = map(int, filter(None, input().split(' '))) # 칸 수, 년도
 forest = []
 rule = []
 potion = [[n-1,0],[n-1,1],[n-2,0],[n-2,1]]
@@ -28,11 +28,11 @@ cross_dir = [
 ]
 
 for i in range(n):
-    tree_height = list(map(int, input().split(' ')))
+    tree_height = list(map(int, filter(None, input().split(' '))))
     forest.append(tree_height)
 
 for i in range(m):
-    rule_tmp = list(map(int, input().split(' ')))
+    rule_tmp = list(map(int, filter(None, input().split(' '))))
     rule.append(rule_tmp)
     
 
