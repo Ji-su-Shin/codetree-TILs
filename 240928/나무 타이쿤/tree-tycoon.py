@@ -4,7 +4,7 @@ import copy
 n, m = map(int, input().split(" ")) # 칸 수, 년도
 forest = []
 rule = []
-potion = [[4,0],[4,1],[3,0],[3,1]]
+potion = [[n-1,0],[n-1,1],[n-2,0],[n-2,1]]
 potione_pre = []
 total_height = 0
 
@@ -69,15 +69,15 @@ for current_year in range(m):
     # 영양제 구매
     for x in range(n):
         for y in range(n):
-            if forest[x][y] >= 2 and ([x, y] not in potion_pre):
+            if ([x, y] not in potion_pre) and forest[x][y] >= 2:
                 forest[x][y] -= 2
                 potion.append([x, y])
+
     potion_pre.clear()
 
 
 # 최종 나무 높이 출력
 for x in range(n):
-    for y in range(n):
-        total_height += forest[x][y]
+    total_height += sum(forest[x])
 
 print(total_height)
