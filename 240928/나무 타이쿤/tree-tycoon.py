@@ -29,7 +29,6 @@ cross_dir = [
 
 for i in range(n):
     tree_height = list(map(int, input().split(' ')))
-    print(tree_height)
     forest.append(tree_height)
 
 for i in range(m):
