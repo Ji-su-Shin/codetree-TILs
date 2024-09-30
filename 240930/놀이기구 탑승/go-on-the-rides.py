@@ -10,7 +10,7 @@ dir = [
 ]
 
 for _ in range(n*n):
-    student = list(map(int, input().split(" ")))
+    student = list(map(int, filter(None, input().split(" "))))
     students[student[0]] = student[1:]
 
 # 순서대로 앉히기
@@ -64,7 +64,6 @@ for current_student in students.keys():
     # 착석
     attraction[current_seat_x][current_seat_y] = current_student
 
-# print(attraction)
 # 점수 계산
 score = 0
 for x in range(n):
